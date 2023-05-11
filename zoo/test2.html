@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Tickets</title>
+    <link rel="stylesheet" href="test2.css">
+</head>
+<body>
+    <h1>Buy Tickets Now</h1>
+    <div class="in calendar-widget">
+        <from target="_top" class="from has-validation from-horizontal product-PYLJRZ" novalidate="novalidate" id="order-itemfrom" action="/73030/zoo-entry?iframe=true&useTransparentSession=1"method="post">
+            <input type="hidden" value="N0s4QzFZQktfN3lfMWNwZGx5aUE1ZmM2cldCeDV0TXYOktYXzBaNRaJZjrxSRmKnGqW0uU-srQng2OFdaXZg3w==" name="YII_CSRF_TOKEN" class="notranslate">
+            <div id="order-item-from_es_" class="errorSummary" style="display:none">
+                <ul>
+                    <li>dummy</li>
+                </ul>
+            </div>
+            <input name="OrderItem[preferredDate]" id="OrderItem_preferredDate" type="hidden" class="notranslate">
+            <script>
+                $.fn.convertToInput = function (element) {
+                    var attributes = element.prop('attributes');
+                    var events = jQuery._data(element[0], 'events');
+                    var newInput = $('<input type=\'number\' data-min="0" data-max="9999" value=\'0\'>');
+                    newInput.on('input.range', function(event) {
+                        var min = parseInt($(this).attr('data-min'), 10);
+                        var max = parseInt($(this).attr('data-max'), 10);
+                        if (event.target.value < min) {
+                            event.target.value = min;
+                            $(this).trigger('change');
+                        } else if (event.target.value > max) {
+                            event.target.value = max;
+                            $(this).trigger('change');
+                        }
+                    });
+                    element.replaceWith(newInput);
+                
+                    if (typeof attributes !== 'undefined' && attributes.length) {
+                        $.each(attributes, function () {
+                            newInput.attr(this.name, this.value);
+                        });
+                    }
+                
+                    if (typeof events !== 'undefined' ){
+                        Object.values(events).forEach(v => {
+                            if (v[0].namespace === '')
+                                newInput.on(v[0].type, v[0].handler);
+                            else
+                                newInput.on(v[0].type + '.' + v[0].namespace, v[0].handler);
+                        });
+                    }
+                };
+                
+                    // Check if opting 'Add more' option.
+                    $(document).on('change.js.input', '.input-quantities-list', function () {
+                        if ($(this).val() == 'more') {
+                            $.fn.convertToInput($(this));
+                        }
+                    });
+                
+                    // Prevent 'Enter' key from the PriceOption to prevent a form submission
+                    $(document).on('keypress', '.input-quantities-list', function (e) {
+                        if (e.keyCode == 13) {
+                            // Prevent to submit the form
+                            e.preventDefault();
+                            // Trigger blur event
+                            $(this).trigger('blur');
+                        }
+                    });
+                
+                    //Edge case where input quantity cannot be initialized properly (min required qty > 20).
+                    $(function() {
+                        var $qtySelectors = $('.input-quantities-list');
+                        var $options = $qtySelectors.find('option');
+                
+                        if ($qtySelectors.length == 1 && $options.length == 1 && $options.first().val() == 'more') {
+                            $.fn.convertToInput($($qtySelectors[0]));
+                        }
+                    });
+            </script>
+            <div class="participants" data-until-label="Visitors">
+                <h4>
+                    "Enter Number of Visitors "
+                    <em class="required">*</em>
+                </h4>
+                <input name="OrderItem[minQuantityOverride]" id="OrderItem_minQuantityOverride" type="hidden" class="notranslate">
+                <div class="control-group">
+                    <input name="ItemQuantity[73030][0][priceOption][id]" id="ItemQuantity_73030_0_priceOption_id" type="hidden" value="4161178" class="notranslate">
+                    <label class="control-label" for="4161178">
+                        <input name="OrderItem[maxQuantityOverride]" id="OrderItem_maxQuantityOverride" type="hidden" class="notranslate">
+                        "Adult"
+                        <span class="price-unit">
+                            <span class="price-standard update-price-value price" data-currency-base="NZD" data-original-amount="$27.00">$27.00</span>
+                        </span>
+                    </label>
+                    <div class="change-quantity controls price-shown">
+                        <select data-product-id="73030" data-price-type="ADULT" data-price="27.0" data-return-price="0" data-price-label="Adult" data-initial-value="1" data-price-id="4161178" class="input-quantities-list notranslate" width="50" style="width:50px" name="ItemQuantity[73030][0][quantity]" id="ItemQuantity_73030_0_quantity">
+                            <option value="0">0</option>slot
+                            <option value="1" selected="selected">1</option>slot
+                            <option value="2">2</option>slot
+                            <option value="3">3</option>slot
+                            <option value="4">4</option>slot
+                            <option value="5">5</option>slot
+                            <option value="6">6</option>slot
+                            <option value="7">7</option>slot
+                            <option value="8">8</option>slot
+                            <option value="9">9</option>slot
+                            <option value="10">10</option>slot
+                            <option value="11">11</option>slot
+                            <option value="12">12</option>slot
+                            <option value="13">13</option>slot
+                            <option value="14">14</option>slot
+                            <option value="15">15</option>slot
+                            <option value="more">>15</option>slot
+                        </select>
+                    </div>
+                    <!-- ::after -->
+                </div>
+                <div class="control-group">
+                    <!-- ::before -->
+                    <input name="ItemQuantity[73030][1][priceOption][id]" id="ItemQuantity_73030_1_priceOption_id" type="hidden" value="4161179" class="notranslate">
+                    <label class="control-label" for="4161179">
+                        "Child"
+                        <span class="price-unit">
+                            <span class="price-standard update-price-value price" data-currency-base="NZD" data-original-amount="$12.00">$12.00</span>
+                        </span>
+                    </label>
+                    <div class="change-quantity controls price-shown">
+                        <select data-product-id="73030" data-price-type="CHILD" data-price="12.0" data-return-price="0" data-price-label="Child" data-initial-value="1" data-price-id="4161178" class="input-quantities-list notranslate" width="50" style="width:50px" name="ItemQuantity[73030][0][quantity]" id="ItemQuantity_73030_0_quantity">
+                            <option value="0">0</option>slot
+                            <option value="1" selected="selected">1</option>slot
+                            <option value="2">2</option>slot
+                            <option value="3">3</option>slot
+                            <option value="4">4</option>slot
+                            <option value="5">5</option>slot
+                            <option value="6">6</option>slot
+                            <option value="7">7</option>slot
+                            <option value="8">8</option>slot
+                            <option value="9">9</option>slot
+                            <option value="10">10</option>slot
+                            <option value="11">11</option>slot
+                            <option value="12">12</option>slot
+                            <option value="13">13</option>slot
+                            <option value="14">14</option>slot
+                            <option value="15">15</option>slot
+                            <option value="more">>15</option>slot
+                        </select>
+                    </div>
+                    <div class="participants" data-until-label="Visitors">
+                        "Family-1 Kid"
+                        <span class="price-unit">
+                            <span class="price-standard update-price-value price" data-currency-base="NZD" data-original-amount="$50.00">$50.00</span>
+                        </span>
+                    </label>
+                    <div class="change-quantity controls price-shown">
+                        <select data-product-id="73030" data-price-type="FAMILY1" data-price="50.0" data-return-price="0" data-price-label="Family1" data-initial-value="1" data-price-id="4161178" class="input-quantities-list notranslate" width="50" style="width:50px" name="ItemQuantity[73030][0][quantity]" id="ItemQuantity_73030_0_quantity">
+                            <option value="0">0</option>slot
+                            <option value="1" selected="selected">1</option>slot
+                            <option value="2">2</option>slot
+                            <option value="3">3</option>slot
+                            <option value="4">4</option>slot
+                            <option value="5">5</option>slot
+                            <option value="6">6</option>slot
+                            <option value="7">7</option>slot
+                            <option value="8">8</option>slot
+                            <option value="9">9</option>slot
+                            <option value="10">10</option>slot
+                            <option value="11">11</option>slot
+                            <option value="12">12</option>slot
+                            <option value="13">13</option>slot
+                            <option value="14">14</option>slot
+                            <option value="15">15</option>slot
+                            <option value="more">>15</option>slot
+                        </select>
+                    </div>
+                    <div class="participants" data-until-label="Visitors">
+                        "Family-2 Kid"
+                        <span class="price-unit">
+                            <span class="price-standard update-price-value price" data-currency-base="NZD" data-original-amount="$60.00">$60.00</span>
+                        </span>
+                    </label>
+                    <div class="change-quantity controls price-shown">
+                        <select data-product-id="73030" data-price-type="Family2" data-price="60.0" data-return-price="0" data-price-label="Family2" data-initial-value="1" data-price-id="4161178" class="input-quantities-list notranslate" width="50" style="width:50px" name="ItemQuantity[73030][0][quantity]" id="ItemQuantity_73030_0_quantity">
+                            <option value="0">0</option>slot
+                            <option value="1" selected="selected">1</option>slot
+                            <option value="2">2</option>slot
+                            <option value="3">3</option>slot
+                            <option value="4">4</option>slot
+                            <option value="5">5</option>slot
+                            <option value="6">6</option>slot
+                            <option value="7">7</option>slot
+                            <option value="8">8</option>slot
+                            <option value="9">9</option>slot
+                            <option value="10">10</option>slot
+                            <option value="11">11</option>slot
+                            <option value="12">12</option>slot
+                            <option value="13">13</option>slot
+                            <option value="14">14</option>slot
+                            <option value="15">15</option>slot
+                            <option value="more">>15</option>slot
+                        </select>
+                    </div> 
+                            <!-- ::after -->
+                    </div>
+                    </select>
+                    </div>
+                </div>
+            </div>
+        </from>
+    </div>
+</body>
+</html>
