@@ -1,0 +1,91 @@
+.container{
+    width: 1200px;
+    height: 2700px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.section{
+    width: 1200px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background: #f9ebc7;
+}
+
+.logo{
+    width: 210px;
+    height: 120px;
+}
+
+
+
+.address{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.location{
+    width: 330px;
+    height: 60px;
+    margin-top: 9px;
+    text-align: center;
+    color: #c4661f;
+
+}
+#header{
+    font-size: 25px;
+    font-family: cursive;
+    padding-right: 20px;
+}
+#content{
+    font-size: 15px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+button[type='submit']{
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    margin-top: 11px;
+    margin-left: 95px;
+    font-family: cursive;
+    font-size: 20px;
+    border-radius: 5px;
+    background: #c4661f;
+    border: 0px;
+    color: #fefae0;
+}
+
+#menu ul{
+    list-style: none;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 15px;
+    font-family: cursive;
+}
+
+#menu ul li{
+    color: aliceblue;
+    float: left;
+    width: 195px;
+    height: 40px;
+    line-height: 40px;
+}
+
+#menu u li a {
+    color: aliceblue;
+    text-decoration: none;
+    display: block;
+}
+
+#menu ul li a:hover{
+    color: #c4661f;
+}
