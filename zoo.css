@@ -15,7 +15,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    background: #d4b4a1;
+    background: #fdd7d1;
 }
 
 .logo{
@@ -36,7 +36,7 @@
     height: 60px;
     margin-top: 9px;
     text-align: center;
-    color: #80221e;
+    color: #7e1037;
 
 }
 #header{
@@ -58,9 +58,9 @@ button[type='submit']{
     font-family: 'Caveat', cursive;
     font-size: 25px;
     border-radius: 5px;
-    background: #80221e;
+    background: #7e1037;
     border: 0px;
-    color: #fefae0;
+    color: #f7ece4;
 }
 
 #menu ul{
@@ -85,8 +85,12 @@ button[type='submit']{
     display: block;
 }
 
+a:link{
+    color: #d0637c;
+}
+
 #menu ul li a:hover{
-    color: #80221e;
+    color: #751102;
 }
 
 .welcome img{
@@ -101,25 +105,25 @@ button[type='submit']{
     flex-direction: row;
     width: 320px;
     height: 650px;
-    background: #b0efef;
+    background: rgb(122, 222, 255);
 }
 
 .welcome h1{
-    font-size: 60px;
+    font-size: 70px;
     text-align: center;
-    color: #000000;
-    padding-top: 80px;
-    font-family: 'Kaushan Script', cursive;
-    line-height: 80px;
+    color: aliceblue;
+    padding-top: 90px;
+    font-family: 'Bubblegum Sans', cursive;
+    line-height: 90px;
     margin-right: 9px;
 }
 
 #learn{
-    background: #83d9dc;
+    background: rgb(0, 157, 255);
     width: 180px;
     height: 45px;
     margin: auto;
-    color: #000000;
+    color: aliceblue;
 }
 
 .plan{

@@ -1,0 +1,159 @@
+.container{
+    width: 1200px;
+    height: 1840px;
+    margin: auto;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.section{
+    width: 1200px;
+    height: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background: #fdd7d1;
+}
+
+.logo{
+    width: 210px;
+    height: 120px;
+}
+
+
+
+.address{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.location{
+    width: 330px;
+    height: 60px;
+    margin-top: 9px;
+    text-align: center;
+    color: #7e1037;
+
+}
+#header{
+    font-size: 25px;
+    font-family: cursive;
+    padding-right: 20px;
+}
+#content{
+    font-size: 15px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+button[type='submit']{
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    margin-top: 11px;
+    margin-left: 95px;
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+    border-radius: 5px;
+    background: #7e1037;
+    border: 0px;
+    color: #f7ece4;
+}
+
+#menu ul{
+    list-style: none;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 15px;
+    font-family: cursive;
+}
+
+#menu ul li{
+    color: aliceblue;
+    float: left;
+    width: 195px;
+    height: 40px;
+    line-height: 40px;
+}
+
+#menu u li a {
+    color: aliceblue;
+    text-decoration: none;
+    display: block;
+}
+
+a:link{
+    color: #d0637c;
+}
+
+#menu ul li a:hover{
+    color: #751102;
+}
+
+.title{
+    position: relative;
+    width: 1200px;
+    height: 640px;
+}
+.title h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 170px;
+    font-family: 'Bubblegum Sans', cursive;
+    color: #f7ece4;
+}
+
+.eve{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    float: left;
+    width: 1200px;
+    height: 540px;
+    background: #a9b388;
+}
+
+.picture{
+    width: 350px;
+    height: 540px;
+    text-align: center;
+   
+}
+.des{
+    width: 850px;
+    height: 540px;
+}
+.picture span{
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
+}
+.picture img{
+    border-radius: 7px;
+    margin: 20px auto;
+}
+
+.des p{
+    font-family: cursive;
+    font-size: 25px;
+    margin-top: 45px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.des button{
+    margin-left: 620px;
+    margin-top: 200px;
+    background: #5f6f52;
+}
+
+#after{
+    background: #e0bb76;
+}
+#des{
+    background: #c4661f;
+    margin-top: 240px;
+}
