@@ -1,6 +1,6 @@
 .container{
     width: 1200px;
-    height: 2430px;
+    height: 2690px;
     margin: auto;
 }
 
@@ -31,7 +31,6 @@
     line-height: 60px;
     padding-left: 10px;
 }
-
 
 .address{
     display: flex;
@@ -96,122 +95,74 @@ button[type='submit']{
 a:link{
     color: #d0637c;
 }
+
 #menu ul li a:hover{
     color: #751102;
 }
 
 .title{
     position: relative;
-    text-align: center;
     width: 1200px;
-    height: 500px;
+    height: 550px;
 }
 .title h1{
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 39%;
+    left: 2%;
+    transform: translate(-0%, -0%);
+    font-size: 160px;
     font-family: 'Bubblegum Sans', cursive;
-    color: #f7ece4;
-    font-size: 110px;
+    color: #ffffff;
 }
 
-.animals{
+.visit{
     width: 1200px;
-    height: 1720px;
+    height: 1960px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .box{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 1200px;
+    width: 600px;
     height: 600px;
     text-align: center;
+    color: #fefae0;
 }
 
-.animals h2{
+h2{
     width: 1200px;
     height: 80px;
     background: #fefae0;
-}
-
-.box1{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-.picture{
-    width: 400px;
-    height: 520px;
-    position: relative;
     text-align: center;
+    color: #c83e6a;
+    font-family: 'Euphoria Script', cursive;
+    font-size: 70px;
 }
 
-.picture img{
-    padding-top: 5px;
+.visit img{
+    border-radius: 10px;
+    margin-top: 60px;
 }
 
-.line{
-    position: absolute;
+#box{
+    margin-top: 120px;
+}
+
+.visit span{
+    font-family: 'Caveat', cursive;
+    font-size: 45px;
+}
+
+.visit p{
+    font-family: cursive;
+    font-size: 25px;
     padding-left: 10px;
     padding-right: 10px;
-    top: 78%;
-    left: 0%;  
-    color: #fefae0;
-    background: rgba(53, 58, 52, 0.65);
-    width: 370px;
-    height: 110px;
-    margin-left: 5px;
 }
-
-.animals h3{
-    font-family: 'Caveat', cursive;
-    font-size: 40px;
+#box1{
+    margin-top: 15px;
 }
-
-.animals p{
-    font-family: cursive;
-    font-size: 14px;
-}
-
-.box3{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 800px;
-    height: 520px;
-}
-
-.box2{
-    width: 400px;
-    height: 260px;
-    position: relative;
-    text-align: center;
-}
-
-.line1{
-    position: absolute;
-    top: 56%;
-    left: 0%;  
-    color: #fefae0;
-    background: rgba(53, 58, 52, 0.65);
-    width: 386px;
-    height: 110px;
-    margin-left: 2px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.box3 img{
-    padding-top: 5px;
-}
-
-.animals h2{
-    color: #236130;
-    font-family: 'Euphoria Script', cursive;
-    font-size: 75px;
-}
-
 .last{
     width: 1200px;
     height: 80px;

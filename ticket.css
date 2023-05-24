@@ -1,7 +1,6 @@
 .container{
     width: 1200px;
-    height: 2700px;
-    border: 1px solid black;
+    height: 2370px;
     margin: auto;
 }
 
@@ -16,7 +15,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    background: #f9ebc7;
+    background: #fdd7d1;
 }
 
 .logo{
@@ -37,7 +36,7 @@
     height: 60px;
     margin-top: 9px;
     text-align: center;
-    color: #c4661f;
+    color: #7e1037;
 
 }
 #header{
@@ -56,12 +55,12 @@ button[type='submit']{
     height: 40px;
     margin-top: 11px;
     margin-left: 95px;
-    font-family: cursive;
-    font-size: 20px;
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
     border-radius: 5px;
-    background: #c4661f;
+    background: #7e1037;
     border: 0px;
-    color: #fefae0;
+    color: #f7ece4;
 }
 
 #menu ul{
@@ -86,6 +85,27 @@ button[type='submit']{
     display: block;
 }
 
+a:link{
+    color: #d0637c;
+}
+
 #menu ul li a:hover{
-    color: #c4661f;
+    color: #751102;
+}
+
+.title{
+    position: relative;
+    width: 1200px;
+    height: 550px;
+    margin-top: -4px;
+}
+
+.title h1{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    transform: translate(0%, 50%);
+    font-size: 120px;
+    font-family: 'Bubblegum Sans', cursive;
+    color: #f7ece4;
 }

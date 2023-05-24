@@ -22,7 +22,14 @@
     width: 210px;
     height: 120px;
 }
-
+.logo h5{
+    font-family: 'Rubik Puddles', cursive;
+    color: #7e1037;
+    font-size: 50px;
+    text-align: center;
+    line-height: 60px;
+    padding-left: 10px;
+}
 
 
 .address{
