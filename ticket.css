@@ -1,6 +1,6 @@
 .container{
     width: 1200px;
-    height: 2370px;
+    height: 2170px;
     margin: auto;
 }
 
@@ -23,6 +23,14 @@
     height: 120px;
 }
 
+.logo h5{
+    font-family: 'Rubik Puddles', cursive;
+    color: #7e1037;
+    font-size: 50px;
+    text-align: center;
+    line-height: 60px;
+    padding-left: 10px;
+}
 
 
 .address{
@@ -103,9 +111,99 @@ a:link{
 .title h1{
     position: absolute;
     top: 30%;
-    left: 15%;
+    left: 12%;
     transform: translate(0%, 50%);
-    font-size: 120px;
+    font-size: 130px;
     font-family: 'Bubblegum Sans', cursive;
     color: #f7ece4;
+}
+
+.ticket{
+    width: 1200px;
+    height: 1500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.des{
+    width: 750px;
+    height: 1500px;
+}
+
+.buy{
+    width: 450px;
+    height: 1500px;
+}
+
+.cont{
+    padding-left: 60px;
+    padding-right: 10px;
+    margin-top: 70px;
+}
+
+h2{
+    font-size: 75px;
+    font-family: 'Euphoria Script', cursive;
+}
+
+.hea{
+    font-size: 27px;
+}
+
+.cont p{
+    font-size: 20px;
+}
+.book{
+    width: 350px;
+    height: 980px;
+    margin: 70px auto;
+    text-align: center;
+}
+
+.booking{
+    width: 320px;
+    height: 610px;
+    text-align: right;
+    margin: 0px auto;
+    margin-right: 22px;
+}
+.boo b{
+    font-size: 20px;
+    margin-right: 55px;
+}
+
+#des{
+    margin-right: 60px;
+}
+#fam{
+    margin-right: 202px;
+}
+#bo{
+   margin-right: 105px;
+}
+#stu{
+    margin-right: 95px;
+} 
+select{
+    margin-right: 10px;
+    width: 40px;
+    height: 30px;
+}
+#buy{
+    color: #eeeeee;
+    margin: 10px auto;
+    background: #056c89;
+}
+.book h3{
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+}
+.note{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+}
+.note b{
+    font-size: 25px;
 }
