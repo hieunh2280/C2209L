@@ -7,5 +7,13 @@ export default defineConfig({
             input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
         }),
+        laravel({
+            input: ['resources/css/zoo.css'],
+            refresh: true,
+        }),
+        laravel({
+            input: 'resources/img',
+            refresh: true,
+        })
     ],
 });
