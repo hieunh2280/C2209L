@@ -1,0 +1,190 @@
+.container{
+    width: 1200px;
+    height: 1490px;
+    margin: auto;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.section{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #fdd7d1;
+}
+
+.logo{
+    width: 210px;
+    height: 120px;
+}
+
+.logo h5{
+    font-family: 'Rubik Puddles', cursive;
+    color: #7e1037;
+    font-size: 50px;
+    text-align: center;
+    line-height: 60px;
+    padding-left: 10px;
+}
+
+.address{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.location{
+    width: 330px;
+    height: 60px;
+    margin-top: 9px;
+    text-align: center;
+    color: #7e1037;
+
+}
+#header{
+    font-size: 25px;
+    font-family: cursive;
+    padding-right: 20px;
+}
+#content{
+    font-size: 15px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+button[type='submit']{
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    margin-top: 11px;
+    margin-left: 95px;
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+    border-radius: 5px;
+    background: #7e1037;
+    border: 0px;
+    color: #f7ece4;
+}
+
+#menu ul{
+    list-style: none;
+    text-align: center;
+    margin-top: 15px;
+    font-family: cursive;
+}
+
+#menu ul li{
+    color: aliceblue;
+    float: left;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+}
+
+#menu u li a {
+    color: aliceblue;
+    text-decoration: none;
+    display: block;
+}
+
+a:link{
+    color: #d0637c;
+}
+
+#menu ul li a:hover{
+    color: #751102;
+}
+
+.support{
+    width: 1200px;
+    height: 660px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.title{
+    position: relative;
+    width: 1200px;
+    height: 550px;
+}
+
+.title h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 114px;
+    font-family: 'Bubblegum Sans', cursive;
+    color: #f7ece4;
+}
+
+
+.us{
+    width: 600px;
+    height: 660px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.picture{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 600px;
+    height: 573px;
+}
+
+.support h2{
+    margin: auto;
+    font-family: 'Euphoria Script', cursive;
+    font-size: 65px;
+}
+
+.pic{
+    width: 194px;
+    height: 360px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: -2px auto;
+    
+}
+
+.support img{
+    border-radius: 10px;
+}
+.support span{
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+}
+.support p{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: cursive;
+}
+.contact{
+    width: 1200px;
+    height: 150px;
+    
+}
+h3{
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 45px;
+    margin-left: 300px;
+    padding-top: 15px;
+}
+#email{
+    width: 400px;
+    height: 35px;
+    border-radius: 7px;
+    margin-left: 300px;
+}
+#sign{
+    margin-left: 10px;
+    background: #83b3db;
+}
