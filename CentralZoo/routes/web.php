@@ -20,6 +20,7 @@ Route::prefix("")->group(function(){
     Route::get('/', [PageController::class, 'home'])->name('home');
     Route::get('/support', [PageController::class, 'support'])->name('support');
     Route::get('/feedback', [PageController::class, 'feedback'])->name('feedback');
+    Route::post('/feedback', [PostsController::class, 'feedback']);
     Route::get('/events', [PageController::class, 'events'])->name('events');
     Route::get('/animals', [PageController::class, 'animals'])->name('animals');
     Route::get('/tickets', [PageController::class, 'ticket'])->name('ticket');

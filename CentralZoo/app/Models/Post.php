@@ -9,6 +9,7 @@ use App\Models\Orderdetail;
 use App\Models\Customers;
 use App\Models\Orders;
 use App\Models\Ordercart;
+use App\Models\Feedback;
 
 class Post extends Model
 {
@@ -92,8 +93,14 @@ class Post extends Model
         return !$customer->isEmpty();
     }
 
-    // public static function getCusId($phone){
-    //     $customer = Customers::where('phone', '=', $phone)->get();
-    //     return $customer->value('id');
-    // }
+    public static function feedback($request){
+        $fb = new Feedback;
+        $fb->name = $request->name;
+        $fb->phone = $request->phone;
+        $fb->email = $request->email;
+        $fb->opinion = $request->opinion;
+        $fb->save();
+
+        return redirect()->back()->with('success','Thank you for your feedback!');
+    }
 }

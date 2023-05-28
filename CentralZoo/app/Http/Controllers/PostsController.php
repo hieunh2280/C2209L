@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TicketRequest;
 use App\Http\Requests\CustomerInfoRequest;
+use App\Http\Requests\FeedbackRequest;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Support\Facades\DB;
@@ -51,4 +52,8 @@ class PostsController extends Controller
         
         return redirect()->route('home')->with('order-success','Thanks for using our services, feel free to explore more about our Zoo!');
     }
+
+    public function feedback(FeedbackRequest $request){
+        return Post::feedback($request);
+    } 
 }

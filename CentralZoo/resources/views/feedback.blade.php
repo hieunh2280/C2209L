@@ -15,29 +15,55 @@ Feedback to us!
 
     <div class="feedback">
         <h2>Your opinion will help us improve services in the future</h2>
-        <form action="post">
+        <form method="post">
+            @csrf
             <div class="feed">
-            <div class="back">
-                <label>Name:</label>
-                <input type="text" id="name" placeholder="Enter your Name">
+                <div class="back">
+                    <label>Name:</label>
+                    <input type="text" id="name" placeholder="Enter your Name">
+                </div>
+                @error('name')
+                    <div class="error">
+                        {{ $message }}
+                    </div>
+                @enderror
+                <div class="back">
+                    <label>Email:</label>
+                    <input type="email" id="email" placeholder="Enter your Email">
+                </div>
+                @error('email')
+                    <div class="error">
+                        {{ $message }}
+                    </div>
+                @enderror
+                <div class="back" id="number">
+                    <label>Phone Number:</label>
+                    <input type="text" id="phone" placeholder="Enter your Phone Number">
+                </div>
+                @error('phone')
+                    <div class="error">
+                        {{ $message }}
+                    </div>
+                @enderror
+                <div class="back" id="opi">
+                    <label>Opinion:</label>
+                    <input type="text" id="opinion" placeholder="Enter your Opinion">
+                </div>
+                @error('opinion')
+                    <div class="error">
+                        {{ $message }}
+                    </div>
+                @enderror
+                @if(Session::has('success'))
+                    <div class="alert">
+                        {{Session::get('success')}}
+                    </div>
+                @endif
+                <div class="back" id="sub">
+                    <label></label>
+                    <button type="submit" id="can">Submit</button>
+                </div>
             </div>
-            <div class="back">
-                <label>Email:</label>
-                <input type="email" id="email" placeholder="Enter your Email">
-            </div>
-            <div class="back" id="number">
-                <label>Phone Number:</label>
-                <input type="text" id="phone" placeholder="Enter your Phone Number">
-            </div>
-            <div class="back" id="opi">
-                <label>Opinion:</label>
-                <input type="text" id="opinion" placeholder="Enter your Opinion">
-            </div>
-            <div class="back" id="sub">
-                <label></label>
-                <button type="submit" id="can">Submit</button>
-            </div>
-        </div>
         </form>
     </div>
 @endsection
