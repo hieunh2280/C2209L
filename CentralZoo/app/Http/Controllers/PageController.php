@@ -32,7 +32,13 @@ class PageController extends Controller
         return view('ticket');
     }
 
+    public function order(){
+        return view('quan.order');
+    }
+
     public function visit(){
         return view('visit');
     }
+
+    
 }

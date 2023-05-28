@@ -1,10 +1,13 @@
 @extends('layouts.app')
+
 @section('title')
 Tickets
 @endsection
+
 @section('css')
 <link href="{{ asset('css/ticket.css') }}" rel="stylesheet">
 @endsection
+
 @section('content')
     <div class="title">
         <img src="{{ asset('img') }}/penguin.png" width="1200" height="550">
@@ -35,7 +38,6 @@ Tickets
             <div class="book" style="background-color: #c3e4e9;">
                 <form action="" method="post">
                     @csrf
-                    @method('post')
                     <h2>Booking Now</h2>
                     <br>
                     <h3>Enter Number of Visitors</h3>
@@ -107,9 +109,7 @@ Tickets
                         
                     </div>
                     @if(Session::has('failed'))
-                        <div class="alert alert-success" role="alert">
                             {{Session::get('failed')}}
-                        </div>
                     @endif
                     <button type="submit" value="order" id="buy">BUY NOW</button>
                     <br><br>

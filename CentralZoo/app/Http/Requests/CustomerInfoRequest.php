@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ValidationRequest extends FormRequest
+class CustomerInfoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,20 +22,21 @@ class ValidationRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required|alpha:ascii|max:255',
+            //
+            'firstname' => 'required|alpha:ascii|max:255',
+            'lastname' => 'required|alpha:ascii|max:255',
             'email' => 'required|email:rfc,dns|max:255',
-            'adult_num' => 'required|numeric|integer|min:0',
-            'senior_num' => 'required|numeric|integer|min:0',
-            'child_num' => 'required|numeric|integer|min:0',
-            'date' => 'required|date'
+            'phone' => 'required|numeric|min_digits:8|max_digits:10|min:0'
         ];
     }
+
     public function messages(): array
     {
     return [
-        'name.required' => 'Please enter your name',
+        'firstname.required' => 'Please enter your first name',
+        'firstname.required' => 'Please enter your last name',
         'email.required' => 'Please enter your email',
-        'date.required' => 'Please select a date',
+        'phone' => 'Please enter your phone number',
     ];
     }
 }

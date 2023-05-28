@@ -18,16 +18,28 @@
     </h6>
     <form action="" method="post">
         @csrf
-        @method('post')
         <div class="form-group row m-3">
             <label class="col-form-label col-sm-2">
-                Name:
+                First Name:
             </label>
             <div class="col-sm-4">
-                <input type="text" class="form-control" name="name" placeholder="Name" value="{{old('name')}}" autocomplete="off">
+                <input type="text" class="form-control" name="firstname" placeholder="First Name" value="{{old('name')}}" autocomplete="off">
             </div>
         </div>
-        @error('name')
+        @error('firstname')
+            <div class="alert alert-danger p-1 col-sm-6" role="alert">
+                {{ $message }}
+            </div>
+        @enderror
+        <div class="form-group row m-3">
+            <label class="col-form-label col-sm-2">
+                Last Name:
+            </label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" name="lastname" placeholder="Last Name" value="{{old('name')}}" autocomplete="off">
+            </div>
+        </div>
+        @error('lastname')
             <div class="alert alert-danger p-1 col-sm-6" role="alert">
                 {{ $message }}
             </div>
@@ -45,69 +57,30 @@
                 {{ $message }}
             </div>
         @enderror
-        <h6>
-            Select Number of Tickets:
-        </h6>
         <div class="form-group row m-3">
             <label class="col-form-label col-sm-2">
-                Adult <br>(18 and over): 
+                Your phone number:
             </label>
             <div class="col-sm-4">
-                <input type="number" class="form-control " name="adult_num" value="0" autocomplete="off">
+                <input type="text" class="form-control" name="phone" placeholder="Phone number" value="{{old('name')}}" autocomplete="off">
             </div>
         </div>
-        @error('adult_num')
+        @error('phone')
             <div class="alert alert-danger p-1 col-sm-6" role="alert">
                 {{ $message }}
             </div>
         @enderror
         <div class="form-group row m-3">
-            <label class="col-form-label col-sm-2">
-                Senior <br>(60 and over):
-            </label>
-            <div class="col-sm-4">
-                <input type="number" class="form-control" name="senior_num" value="0" autocomplete="off"> 
-            </div>
+            <div class="col m-3"><input type="checkbox" name="membership">Do you want to regist as a community client?</div>
         </div>
-        @error('senior_num')
-            <div class="alert alert-danger p-1 col-sm-6" role="alert">
-                {{ $message }}
-            </div>
-        @enderror
-        <div class="form-group row m-3">
-            <label class="col-form-label col-sm-2">
-                Child <br>(under 18):
-            </label>
-            <div class="col-sm-4">
-                <input type="number" class="form-control" name="child_num" value="0" autocomplete="off">
-            </div>
-        </div>
-        @error('child_num')
-            <div class="alert alert-danger p-1 col-sm-6" role="alert">
-                {{ $message }}
-            </div>
-        @enderror
         @if(Session::has('failed'))
             <div class="alert alert-danger p-1 col-sm-6" role="alert">
                 {{Session::get('failed')}}
             </div>
         @endif
-        <div class="form-group row m-3">
-            <label class="col-form-label col-sm-2">
-                Date:
-            </label>
-            <div class="col-sm-4">
-                <input type="date" class="form-control" name="date" value="{{old('date')}}" autocomplete="on">
-            </div>
-        </div>
-        @error('date')
-            <div class="alert alert-danger p-1 col-sm-6" role="alert">
-                {{ $message }}
-            </div>
-        @enderror
         <div>
             <input type="submit" class="btn border btn-light border-3" value="Book Ticket">
-            <a href="{{url('/quan/ticket')}}" class="text-decoration-none text-body btn border btn-light border-3">
+            <a onclick="history.go(-1)" class="text-decoration-none text-body btn border btn-light border-3">
                 Go Back
             </a>
             </button>

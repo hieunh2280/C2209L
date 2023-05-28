@@ -23,8 +23,8 @@ Route::prefix("")->group(function(){
     Route::get('/events', [PageController::class, 'events'])->name('events');
     Route::get('/animals', [PageController::class, 'animals'])->name('animals');
     Route::get('/tickets', [PageController::class, 'ticket'])->name('ticket');
+    Route::post('/tickets', [PostsController::class, 'ticket']);
     Route::get('/visit', [PageController::class, 'visit'])->name('visit');
-    Route::post('/tickets', [PostController::class, 'ticket']);
     Route::get('/order', [PageController::class, 'order'])->name('order');
     Route::post('/order', [PostsController::class, 'order']);
     Route::get('/test',[PostsController::class, 'index']);
