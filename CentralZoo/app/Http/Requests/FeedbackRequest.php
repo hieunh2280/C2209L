@@ -25,10 +25,10 @@ class FeedbackRequest extends FormRequest
     {
         return [
             //
-            'name' => 'alpha:ascii|max:255',
-            'email' => 'email:rfc,dns|max:255',
-            'phone' => 'numeric|min_digits:8|max_digits:10|min:0',
-            'opinion' => 'alpha:ascii'
+            'name' => 'nullable|alpha:ascii|max:255',
+            'email' => 'nullable|email:rfc,dns|max:255',
+            'phone' => 'nullable|numeric|min_digits:8|max_digits:10|min:0',
+            'opinion' => 'required|alpha:ascii'
         ];
     }
 

@@ -20,7 +20,7 @@ Feedback to us!
             <div class="feed">
                 <div class="back">
                     <label>Name:</label>
-                    <input type="text" id="name" placeholder="Enter your Name">
+                    <input type="text" name="name" id="name" placeholder="Enter your Name">
                 </div>
                 @error('name')
                     <div class="error">
@@ -29,7 +29,7 @@ Feedback to us!
                 @enderror
                 <div class="back">
                     <label>Email:</label>
-                    <input type="email" id="email" placeholder="Enter your Email">
+                    <input type="email" name="email" id="email" placeholder="Enter your Email">
                 </div>
                 @error('email')
                     <div class="error">
@@ -38,7 +38,7 @@ Feedback to us!
                 @enderror
                 <div class="back" id="number">
                     <label>Phone Number:</label>
-                    <input type="text" id="phone" placeholder="Enter your Phone Number">
+                    <input type="text" name="phone" id="phone" placeholder="Enter your Phone Number">
                 </div>
                 @error('phone')
                     <div class="error">
@@ -47,7 +47,7 @@ Feedback to us!
                 @enderror
                 <div class="back" id="opi">
                     <label>Opinion:</label>
-                    <input type="text" id="opinion" placeholder="Enter your Opinion">
+                    <input type="text" name="opinion" id="opinion" placeholder="Enter your Opinion">
                 </div>
                 @error('opinion')
                     <div class="error">
