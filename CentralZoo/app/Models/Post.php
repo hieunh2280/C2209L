@@ -100,7 +100,7 @@ class Post extends Model
         $fb->email = $request->email;
         $fb->opinion = $request->opinion;
         $fb->save();
-
-        return redirect()->back()->with('success','Thank you for your feedback!');
+        
+        return redirect()->route('feedback')->with('success','Thank you for your feedback!')->withInput();
     }
 }

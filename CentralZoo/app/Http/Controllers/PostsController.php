@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\TicketRequest;
 use App\Http\Requests\CustomerInfoRequest;
 use App\Http\Requests\FeedbackRequest;
+use App\Http\Requests\ContactRequest;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Support\Facades\DB;
@@ -56,4 +57,8 @@ class PostsController extends Controller
     public function feedback(FeedbackRequest $request){
         return Post::feedback($request);
     } 
+
+    public function contact(ContactRequest $request){
+        return Post::contact($request->email);
+    }
 }
