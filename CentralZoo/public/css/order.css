@@ -1,7 +1,15 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+}
+
 .container{
-    width: 1200px;
-    height: 2170px;
-    margin: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
 }
 
 *{
@@ -10,12 +18,13 @@
 }
 
 .section{
-    width: 1200px;
+    width: 1210px;
     height: 120px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     background: #fdd7d1;
+    margin: 0 auto;
 }
 
 .logo{
@@ -103,112 +112,50 @@ a:link{
     color: #751102;
 }
 
-.title{
-    position: relative;
-    width: 1200px;
-    height: 550px;
+.order{
+    text-align: center;
+    width: 1210px;
+    height: 700px;
     margin-top: -4px;
+    background: #fff9f9;
 }
 
-.title h1{
-    position: absolute;
-    top: 30%;
-    left: 12%;
-    transform: translate(0%, 50%);
-    font-size: 130px;
-    font-family: 'Bubblegum Sans', cursive;
-    color: #f7ece4;
-}
-
-.ticket{
-    width: 1200px;
-    height: 1500px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.des{
-    width: 750px;
-    height: 1500px;
-}
-
-.buy{
-    width: 450px;
-    height: 1500px;
-}
-
-.cont{
-    padding-left: 60px;
-    padding-right: 10px;
-    margin-top: 70px;
-}
-
-h2{
-    font-size: 75px;
+.order h1{
+    margin-top: 20px;
+    font-size: 70px;
     font-family: 'Euphoria Script', cursive;
-}
-
-.hea{
-    font-size: 27px;
-}
-
-.cont p{
-    font-size: 20px;
-}
-.book{
-    width: 350px;
-    height: 980px;
-    margin: 70px auto;
+    color: #751102;
     text-align: center;
 }
 
-.booking{
-    width: 320px;
-    height: 610px;
+.form{
+    width: 550px;
+    height: 450px;
+    margin: 15px auto;
     text-align: right;
-    margin: 0px auto;
-    margin-right: 22px;
-}
-.boo b{
-    font-size: 20px;
-    margin-right: 55px;
+    color: #751102;
+    border: 1px solid #751102;
+    padding-top: 30px;
+    border-radius: 10px;
+    background: #ffffff;
 }
 
-#des{
-    margin-right: 60px;
+input{
+    width: 300px;
+    height: 25px;
+    margin-right: 40px;
 }
-#fam{
-    margin-right: 202px;
-}
-#bo{
-   margin-right: 105px;
-}
-#stu{
-    margin-right: 95px;
-} 
+
 select{
-    margin-right: 10px;
-    width: 40px;
+    width: 343px;
     height: 30px;
 }
-#buy{
-    color: #eeeeee;
-    margin: 10px auto;
-    background: #056c89;
-}
-.book h3{
-    font-size: 30px;
+
+label{
+    margin-right: 50px;
+    font-size: 25px;
     font-family: 'Caveat', cursive;
 }
-.note{
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 20px;
-}
-.note b{
-    font-size: 25px;
-}
-#astrick{
-    color: red;
+.btn{
+    margin-right: 195px;
 }

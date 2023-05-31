@@ -23,13 +23,15 @@
     height: 120px;
 }
 
-.logo h5{
+.logo a{
     font-family: 'Rubik Puddles', cursive;
     color: #7e1037;
     font-size: 50px;
-    text-align: center;
-    line-height: 60px;
-    padding-left: 10px;
+    padding-left: 5px;
+}
+
+#zoo{
+    padding-left: 50px;
 }
 
 
@@ -206,4 +208,7 @@ select{
 }
 .note b{
     font-size: 25px;
+}
+#astrick{
+    color: red;
 }

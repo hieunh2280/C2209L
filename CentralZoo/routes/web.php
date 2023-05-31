@@ -30,6 +30,12 @@ Route::prefix("")->group(function(){
     Route::post('/order', [PostsController::class, 'order']);
     Route::get('/test',[PostsController::class, 'index']);
 });
+
+Route::prefix("admin")->group(function(){
+    Route::get("/", [AdminController::class, 'home'])->name('manager');
+    Route::get("/animals", [AdminController::class, 'animals'])->name('animals_manage');
+    Route::geet("/events", [AdminController::class, 'events'])->name('events_manage');
+});
 // Ticket page routes
 Route::get('/ticket', function () {
     return view('quan.ticket');
