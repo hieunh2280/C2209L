@@ -6,6 +6,12 @@ Home Page | Central Zoo
 <link href="{{ asset('css/zoo.css') }}" rel="stylesheet">
 @endsection
 @section('content')
+    @if(session('order-success')){
+        <script>
+            alert('{{ session('order-success') }}');
+        </script>
+    }
+    @endif
     <div class="welcome">
         <img src="{{ asset('img')}}/welcome.jpg"/>
         <div class="text">

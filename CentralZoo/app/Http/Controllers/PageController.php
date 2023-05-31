@@ -33,7 +33,11 @@ class PageController extends Controller
     }
 
     public function order(){
-        return view('quan.order');
+        if(session('success')){
+            return view('order');    
+        }
+        session()->flash('failed', 'Please choose your ticket first');
+        return redirect()->back();
     }
 
     public function visit(){

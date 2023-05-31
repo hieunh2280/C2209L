@@ -34,12 +34,11 @@ Route::prefix("")->group(function(){
 Route::prefix("admin")->group(function(){
     Route::get("/", [AdminController::class, 'home'])->name('manager');
     Route::get("/animals", [AdminController::class, 'animals'])->name('animals_manage');
-    Route::geet("/events", [AdminController::class, 'events'])->name('events_manage');
+    Route::get("/events", [AdminController::class, 'events'])->name('events_manage');
 });
 // Ticket page routes
 Route::get('/ticket', function () {
-    return view('quan.ticket');
+    return view('quan.order');
 });
-Route::get('/ticket/order', [OrderController::class, 'create']);
-Route::post('/ticket/order', [OrderController::class, 'store']);
+
 

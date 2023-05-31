@@ -40,33 +40,33 @@ Tickets
                     @csrf
                     <h2>Booking Now</h2>
                     <br>
-                    <h3>Enter Number of Visitors</h3>
+                    <h3>Enter Number of Visitors<b id="astrick">*</b></h3>
                     <br><br>
                     <div class="booking">
                         <div class="boo">
                             <b id="bo">Adult</b>
-                            <input type="number" name="adult_num" min="0" max="30" value="0" autocomplete="off">
+                            <input type="number" name="adult_num" min="0" max="30" value="{{old('adult_num', 0)}}" autocomplete="off">
                             <span>$27.00</span>
                         </div>
 
                         <br><br>
                         <div class="boo">
                             <b id="bo">Child </b>
-                            <input type="number" name="child_num" min="0" max="30" value="0" autocomplete="off">
+                            <input type="number" name="child_num" min="0" max="30" value="{{old('child_num', 0)}}" autocomplete="off">
                             <span>$12.00</span>
                         </div>
 
                         <br><br>
                         <div class="boo">
                             <b id="stu">Student </b>
-                            <input type="number" name="student_num" min="0" max="30" value="0" autocomplete="off">
+                            <input type="number" name="student_num" min="0" max="30" value="{{old('student_num', 0)}}" autocomplete="off">
                             <span>$20.00</span>
                         </div>
 
                         <br><br>
                         <div class="boo">
                             <b>Community Card </b>
-                            <input type="number" name="com_card_num" min="0" max="30" value="0" autocomplete="off">
+                            <input type="number" name="com_card_num" min="0" max="30" value="{{old('com_card_num', 0)}}" autocomplete="off">
                             <span>$20.00</span>
                         </div>
 
@@ -75,7 +75,7 @@ Tickets
                             <b id="fam">Family </b>
                             <br>
                             <span id="des">2 adults and 2 children</span>
-                            <input type="number" name="fam_1_num" min="0" max="30" value="0" autocomplete="off">
+                            <input type="number" name="fam_1_num" min="0" max="30" value="{{old('fam_1_num', 0)}}" autocomplete="off">
                             <span>$66.00</span>
                         </div>
                         
@@ -84,7 +84,7 @@ Tickets
                             <b id="fam">Family </b>
                             <br>
                             <span id="des">2 adults and 1 children</span>
-                            <input type="number" name="fam_2_num" min="0" max="30" value="0" autocomplete="off">
+                            <input type="number" name="fam_2_num" min="0" max="30" value="{{old('fam_2_num', 0)}}" autocomplete="off">
                             <span>$55.00</span>
                         </div>
                         
@@ -93,7 +93,7 @@ Tickets
                             <b id="fam">Family </b>
                             <br>
                             <span id="des">1 adult and 2 children</span>
-                            <input type="number" name="fam_3_num" min="0" max="30" value="0" autocomplete="off">
+                            <input type="number" name="fam_3_num" min="0" max="30" value="{{old('fam_3_num', 0)}}" autocomplete="off">
                             <span>$55.00</span>
                         </div>
 
@@ -103,14 +103,15 @@ Tickets
                             <b id="fam">Family </b>
                             <br>
                             <span id="des">2 adults and 3 children</span>
-                            <input type="number" name="fam_4_num" min="0" max="30" value="0" autocomplete="off">
+                            <input type="number" name="fam_4_num" min="0" max="30" value="{{old('fam_4_num', 0)}}" autocomplete="off">
                             <span>$80.00</span>
                         </div>
                         
                     </div>
-                    @if(Session::has('failed'))
-                            {{Session::get('failed')}}
+                    @if(session('failed'))
+                            <script>alert('{{session('failed')}}')</script>
                     @endif
+                    <br>
                     <button type="submit" value="order" id="buy">BUY NOW</button>
                     <br><br>
                     <div class="note">

@@ -32,6 +32,10 @@ body{
     height: 120px;
 }
 
+a:link{
+    color: #d0637c;
+}
+
 .logo a{
     font-family: 'Rubik Puddles', cursive;
     color: #7e1037;
@@ -104,9 +108,6 @@ button[type='submit']{
     display: block;
 }
 
-a:link{
-    color: #d0637c;
-}
 
 #menu ul li a:hover{
     color: #751102;
@@ -118,10 +119,11 @@ a:link{
     height: 700px;
     margin-top: -4px;
     background: #fff9f9;
+    margin:auto;
 }
 
 .order h1{
-    margin-top: 20px;
+    /* margin-top: 20px; */
     font-size: 70px;
     font-family: 'Euphoria Script', cursive;
     color: #751102;
@@ -130,7 +132,7 @@ a:link{
 
 .form{
     width: 550px;
-    height: 450px;
+    height: 500px;
     margin: 15px auto;
     text-align: right;
     color: #751102;
@@ -140,10 +142,14 @@ a:link{
     background: #ffffff;
 }
 
-input{
+#inputbox{
     width: 300px;
     height: 25px;
     margin-right: 40px;
+}
+
+#check{
+    text-align: center;
 }
 
 select{

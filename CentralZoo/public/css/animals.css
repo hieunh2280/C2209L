@@ -23,14 +23,22 @@
     height: 120px;
 }
 
-.logo h5{
+a:link{
+    color: #d0637c;
+}
+
+.logo a{
     font-family: 'Rubik Puddles', cursive;
     color: #7e1037;
     font-size: 50px;
-    text-align: center;
-    line-height: 60px;
-    padding-left: 10px;
+    padding-left: 5px;
 }
+
+#zoo{
+    padding-left: 50px;
+}
+
+
 
 
 .address{

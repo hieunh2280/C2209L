@@ -19,5 +19,16 @@
         @include('layouts.header')
         @yield('content')
     </div>
+    <script>
+        window.onbeforeunload = function() {
+          localStorage.setItem('scrollPos', window.scrollY);
+        };
+        window.onload = function() {
+          let scrollPos = localStorage.getItem('scrollPos'); 
+          if (scrollPos) {
+            window.scrollTo(0, scrollPos);
+          }
+        };
+      </script>
 </body>
 </html>

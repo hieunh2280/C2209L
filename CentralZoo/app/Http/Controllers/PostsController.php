@@ -8,6 +8,7 @@ use App\Http\Requests\CustomerInfoRequest;
 use App\Http\Requests\FeedbackRequest;
 use App\Http\Requests\ContactRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use App\Models\Post;
 use Illuminate\Support\Facades\DB;
 
@@ -34,8 +35,10 @@ class PostsController extends Controller
         $cart = array($request->adult_num, $request->child_num, $request->student_num, $request->com_card_num, $request->fam_1_num, $request->fam_2_num, $request->fam_3_num, $request->fam_4_num);
         Post::clearCart();
         if (!Post::pushCart($cart)){
-            return redirect()->back()->with('failed', 'Failed to add your order to your cart')->withInput();
+            session()->flash('failed', 'Failed to add your order to your cart');
+            return redirect()->back()->withInput();
         } 
+        session()->flash('success', 'pass');
         return redirect()->route('order')->withInput();
         
     }
@@ -48,10 +51,11 @@ class PostsController extends Controller
         }
 
         if (!Post::order(array($request->firstname, $request->lastname, $request->email, $request->phone, $member))){
-            return redirect()->back()->with('failed', 'Failed to commit your request')->withInput();
+            session()->flash('failed', 'Failed to commit your request');
+            return redirect()->back()->withInput();
         }
-        
-        return redirect()->route('home')->with('order-success','Thanks for using our services, feel free to explore more about our Zoo!');
+        session()->flash('order-success','Thanks for using our services, feel free to explore more about our Zoo!');
+        return redirect()->route('home');
     }
 
     public function feedback(FeedbackRequest $request){
