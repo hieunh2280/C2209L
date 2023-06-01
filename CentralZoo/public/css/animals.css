@@ -74,6 +74,7 @@ button[type='submit']{
 #menu ul{
     list-style: none;
     text-align: center;
+    overflow: hidden;
     margin-top: 15px;
     font-family: cursive;
 }
