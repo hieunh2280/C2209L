@@ -21,6 +21,7 @@
     <div class="section">
         <div id="menu">
             <ul>
+                <li><a style="text-decoration: none" href="{{ route('home') }}">Home</a></li>
                 <li><a style="text-decoration: none" href="{{ route('about') }}">About Us</a></li>
                 <li><a style="text-decoration: none" href="{{ route('visit') }}">Plan A Visit</a></li>
                 <li><a style="text-decoration: none" href="{{ route('events') }}">Events</a></li>
