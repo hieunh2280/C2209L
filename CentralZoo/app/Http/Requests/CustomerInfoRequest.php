@@ -26,7 +26,9 @@ class CustomerInfoRequest extends FormRequest
             'firstname' => 'required|alpha:ascii|max:255',
             'lastname' => 'required|alpha:ascii|max:255',
             'email' => 'required|email:rfc,dns|max:255',
-            'phone' => 'required|numeric|min_digits:8|max_digits:10|min:0'
+            'phone' => 'required|numeric|digits_between:8,10|min:0',
+            'datevisit' => 'nullable'
+
         ];
     }
 
@@ -36,7 +38,7 @@ class CustomerInfoRequest extends FormRequest
         'firstname.required' => 'Please enter your first name',
         'firstname.required' => 'Please enter your last name',
         'email.required' => 'Please enter your email',
-        'phone' => 'Please enter your phone number',
+        'phone.required' => 'Please enter your phone number',
     ];
     }
 }

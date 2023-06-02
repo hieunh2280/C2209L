@@ -108,7 +108,6 @@ button[type='submit']{
     display: block;
 }
 
-
 #menu ul li a:hover{
     color: #751102;
 }
@@ -118,7 +117,7 @@ button[type='submit']{
     width: 1210px;
     height: 700px;
     margin-top: -4px;
-    background: #fff9f9;
+    background: #c3e4e9;
     margin:auto;
 }
 
@@ -126,7 +125,7 @@ button[type='submit']{
     /* margin-top: 20px; */
     font-size: 70px;
     font-family: 'Euphoria Script', cursive;
-    color: #751102;
+    color: #056c89;
     text-align: center;
 }
 
@@ -135,11 +134,11 @@ button[type='submit']{
     height: 500px;
     margin: 15px auto;
     text-align: right;
-    color: #751102;
-    border: 1px solid #751102;
-    padding-top: 30px;
+    color: #056c89;
+    border: 1px solid #056c89;
+    padding-top: 20px;
     border-radius: 10px;
-    background: #ffffff;
+    background: #fff;
 }
 
 #inputbox{
@@ -164,4 +163,12 @@ label{
 }
 .btn{
     margin-right: 195px;
+}
+
+.alert{
+    text-align: left;
+    margin-left: 220px;
+    color: #f70d1a;
+    margin-top: 10px;
+    font-family: cursive;
 }

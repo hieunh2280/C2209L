@@ -29,7 +29,7 @@ class PostsController extends Controller
          */
         $total = $request->adult_num + $request->student_num + $request->child_num + $request->com_card_num + $request->fam_1_num + $request->fam_2_num + $request->fam_3_num + $request->fam_4_num;
         if ($total == 0){
-            return redirect()->back()->with('failed', 'You must choose at least one ticket')->withInput();
+            return redirect()->back()->with('failed', 'Choose at least one ticket')->withInput();
         }
         
         $cart = array($request->adult_num, $request->child_num, $request->student_num, $request->com_card_num, $request->fam_1_num, $request->fam_2_num, $request->fam_3_num, $request->fam_4_num);
@@ -44,6 +44,7 @@ class PostsController extends Controller
     }
 
     public function order(CustomerInfoRequest $request){
+        dd($request);
         if($request->membership != null){
             $member = 1;
         } else {
@@ -51,9 +52,12 @@ class PostsController extends Controller
         }
 
         if (!Post::order(array($request->firstname, $request->lastname, $request->email, $request->phone, $member))){
+            session()->flash('sucess', 'pass');
             session()->flash('failed', 'Failed to commit your request');
+            
             return redirect()->back()->withInput();
         }
+
         session()->flash('order-success','Thanks for using our services, feel free to explore more about our Zoo!');
         return redirect()->route('home');
     }

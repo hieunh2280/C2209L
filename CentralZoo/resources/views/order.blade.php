@@ -9,6 +9,7 @@ Your information | Center Zoo
 @endsection
 
 @section('content')
+   
     <div class="order">
         
         <h1>Your Information</h1>
@@ -43,7 +44,7 @@ Your information | Center Zoo
                 </div>
                 <br>
                 @error('email')
-                    <div class="alert alert-danger p-1 col-sm-6" role="alert">
+                    <div class="alert" role="alert">
                         {{ $message }}
                     </div>
                 @enderror
@@ -54,14 +55,14 @@ Your information | Center Zoo
                 </div>
                 <br>
                 @error('phone')
-                    <div class="alert alert-danger p-1 col-sm-6" role="alert">
+                    <div class="alert" role="alert">
                         {{ $message }}
                     </div>
                 @enderror
                 <br>
                 <div class="box">
                     <label>Visit Date: </label>
-                    <input type="date" id="inputbox">
+                    <input type="date" name="datevisit" id="inputbox">
                 </div>
                 <br>
                 <br>
@@ -69,10 +70,9 @@ Your information | Center Zoo
                     <input type="checkbox" name="membership">Do you want to regist as a community client?
                 </div>
                 <br>
-                @if(Session::has('failed'))
-                    <div class="alert alert-danger p-1 col-sm-6" role="alert">
-                        {{Session::get('failed')}}
-                    </div>
+                @if(session('failed'))
+                        <script>{{ alert(session('failed')) }}</script>
+
                 @endif
                 <br>
                 <button class="btn" type="submit" value="book">BUY TICKET</button>

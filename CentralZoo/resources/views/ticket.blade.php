@@ -109,7 +109,12 @@ Tickets
                         
                     </div>
                     @if(session('failed'))
-                            <script>alert('{{session('failed')}}')</script>
+                        <br>
+                        <br>
+                        <div class="alert">
+                            <b>{{session('failed')}}</b>
+                            <br>
+                        </div>            
                     @endif
                     <br>
                     <button type="submit" value="order" id="buy">BUY NOW</button>
