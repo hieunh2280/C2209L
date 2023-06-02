@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Tickets
+Tickets | Central Zoo
 @endsection
 
 @section('css')

@@ -1,10 +1,13 @@
 @extends('layouts.app')
+@section('title')
+Gallery | Central Zoo
+@endsection
 @section('css')
-<link href="{{ asset('css/animals.css') }}" rel="stylesheet">
+<link href="{{ asset('css/gallery.css') }}" rel="stylesheet">
 @endsection
 @section('content')
     <div class="animals">
-        <div class="box">
+       
             <div class="box1">
                 <div class="picture" style="background-color: #faf0f2;">
                     <img src="{{ asset('img')}}/flamingo.jpg" width="390" height="510">
@@ -30,9 +33,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+      
 
-        <div class="box">
+   
            
             <div class="box1">
                 <div class="picture" style="background-color: #B9CFBA ;">
@@ -85,7 +88,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+       
     </div>
     <div class="last">
         <button onclick="location.href=('./visit')" type="submit">Plan your visit</button>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-Support Us!
+Support Us | Central Zoo
 @endsection
 @section('css')
 <link href="{{ asset('css/support.css') }}" rel="stylesheet">

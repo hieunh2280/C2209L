@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('title')
+Animals | Central Zoo
+@endsection
 @section('css')
 <link href="{{ asset('css/animals.css') }}" rel="stylesheet">
 @endsection

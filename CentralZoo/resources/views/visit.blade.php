@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-Plan your visit! | Central Zoo
+Plan your visit | Central Zoo
 @endsection
 @section('css')
 <link rel="stylesheet" href="{{ asset('css') }}/visit.css">

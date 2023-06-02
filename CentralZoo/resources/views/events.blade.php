@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-Events
+Events | Central Zoo
 @endsection
 @section('css')
 <link href="{{ asset('css/events.css') }}" rel="stylesheet">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-Feedback to us!
+Feedback | Central Zoo
 @endsection
 
 @section('css')

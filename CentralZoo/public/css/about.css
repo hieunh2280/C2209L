@@ -1,0 +1,224 @@
+.container{
+    width: 1200px;
+    margin: auto;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.section{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #fdd7d1;
+}
+
+.logo{
+    width: 210px;
+    height: 120px;
+}
+
+.logo h5{
+    font-family: 'Rubik Puddles', cursive;
+    color: #7e1037;
+    font-size: 50px;
+    text-align: center;
+    line-height: 60px;
+    padding-left: 10px;
+}
+
+
+.address{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.location{
+    width: 330px;
+    height: 60px;
+    margin-top: 9px;
+    text-align: center;
+    color: #7e1037;
+
+}
+#header{
+    font-size: 25px;
+    font-family: cursive;
+    padding-right: 20px;
+}
+#content{
+    font-size: 15px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+button[type='submit']{
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    margin-top: 11px;
+    margin-left: 95px;
+    font-family: 'Caveat', cursive;
+    font-size: 25px;
+    border-radius: 5px;
+    background: #7e1037;
+    border: 0px;
+    color: #f7ece4;
+}
+
+#menu ul{
+    list-style: none;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 15px;
+    font-family: cursive;
+}
+
+#menu ul li{
+    color: aliceblue;
+    float: left;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+}
+
+#menu u li a {
+    color: aliceblue;
+    text-decoration: none;
+    display: block;
+}
+
+a:link{
+    color: #d0637c;
+}
+#menu ul li a:hover{
+    color: #751102;
+}
+
+.title{
+    position: relative;
+    text-align: center;
+    width: 1200px;
+    height: 500px;
+}
+.title h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Bubblegum Sans', cursive;
+    color: #f7ece4;
+    font-size: 110px;
+}
+
+.animals{
+    width: 1200px;
+    height: 1720px;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 1200px;
+    height: 600px;
+    text-align: center;
+}
+
+.animals h2{
+    width: 1200px;
+    height: 80px;
+    background: #fefae0;
+}
+
+.box1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.picture{
+    width: 400px;
+    height: 520px;
+    position: relative;
+    text-align: center;
+}
+
+.picture img{
+    padding-top: 5px;
+}
+
+.line{
+    position: absolute;
+    padding-left: 10px;
+    padding-right: 10px;
+    top: 78%;
+    left: 0%;  
+    color: #fefae0;
+    background: rgba(53, 58, 52, 0.65);
+    width: 370px;
+    height: 110px;
+    margin-left: 5px;
+}
+
+.animals h3{
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
+}
+
+.animals p{
+    font-family: cursive;
+    font-size: 14px;
+}
+
+.box3{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 800px;
+    height: 520px;
+}
+
+.box2{
+    width: 400px;
+    height: 260px;
+    position: relative;
+    text-align: center;
+}
+
+.line1{
+    position: absolute;
+    top: 56%;
+    left: 0%;  
+    color: #fefae0;
+    background: rgba(53, 58, 52, 0.65);
+    width: 386px;
+    height: 110px;
+    margin-left: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.box3 img{
+    padding-top: 5px;
+}
+
+.animals h2{
+    color: #236130;
+    font-family: 'Euphoria Script', cursive;
+    font-size: 75px;
+}
+
+.last{
+    width: 1200px;
+    height: 80px;
+    background: #fefae0;
+}
+
+.last button{
+    margin-left: 950px;
+    margin-top: 20px;
+}
