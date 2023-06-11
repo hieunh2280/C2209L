@@ -17,7 +17,8 @@ class Post extends Model
     /**
      * Insert cart
      */
-    public static function pushCart($arr){
+    public static function pushCart($arr)
+    {
         Ordercart::truncate();
         $count = 0;
         foreach ($arr as $index => $amount){
@@ -33,11 +34,11 @@ class Post extends Model
         return true;
         
     }
-    public static function clearCart(){
+    public static function clearCart()
+    {
         return DB::delete('DELETE FROM ordercart');
     }
-    
-    
+      
     /**
      *Insert new order
      */
@@ -50,7 +51,11 @@ class Post extends Model
         return Post::makeAnOrder($cus->id);
     }
 
-    public static function addCustomer($arr){
+    /**
+     * Store new customer
+     */
+    public static function addCustomer($arr)
+    {
         $cus = new Customers;
         $cus->firstname = $arr[0];
         $cus->lastname = $arr[1];
@@ -59,8 +64,12 @@ class Post extends Model
         $cus->membership = $arr[4];
         $cus->save();
     }
-
-    public static function makeAnOrder($cusId){
+    
+    /**
+     * Store new order
+     */
+    public static function makeAnOrder($cusId)
+    {
         $order = new Orders;
         $order->cus_id = $cusId;
         $order->ord_create_date = date('Y-m-d H:i:s');
@@ -69,7 +78,8 @@ class Post extends Model
         return Post::pushOrderdetail($order->id);
     }
 
-    public static function pushOrderdetail($ordId){
+    public static function pushOrderdetail($ordId)
+    {
         $cart = Ordercart::all();
         foreach ($cart as $index => $item ){
             $od = new Orderdetail();
@@ -82,18 +92,31 @@ class Post extends Model
         return true;
     }
 
-    public static function checkValidDate($date_expired){
+    /**
+     * Check if ticket expired
+     */
+    public static function checkValidDate($date_expired)
+    {
         if ($date_expired->isPast()){
             return false;
         }
         return true;
     }
-    public static function cusIsExist($phone){
+    
+    /**
+     * Check if customer existed
+     */
+    public static function cusIsExist($phone)
+    {
         $customer = Customers::where('phone', '=', $phone)->get();
         return !$customer->isEmpty();
     }
 
-    public static function feedback($request){
+    /**
+     * Store new feedback
+     */
+    public static function feedback($request)
+    {
         $fb = new Feedback;
         $fb->name = $request->name;
         $fb->phone = $request->phone;
@@ -101,6 +124,6 @@ class Post extends Model
         $fb->opinion = $request->opinion;
         $fb->save();
         
-        return redirect()->route('feedback')->with('success','Thank you for your feedback!')->withInput();
+        return redirect()->route('feedback')->with('success','Thank you for your feedback!');
     }
 }

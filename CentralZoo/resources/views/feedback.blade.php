@@ -1,15 +1,13 @@
 @extends('layouts.app')
-
 @section('title')
 Feedback | Central Zoo
 @endsection
-
 @section('css')
 <link href="{{ asset('css/feedback.css') }}" rel="stylesheet">
 @endsection
 @section('content')
     <div class="title">
-        <img src="{{ asset('img')}}/toucan.jpg" width="1200" height="550">
+        <img src="{{ asset('img')}}/toucan.jpg" width="1200" height="550"  style="filter: brightness(75%)">
         <h1>FEEDBACK</h1>
     </div>
 
@@ -63,7 +61,7 @@ Feedback | Central Zoo
                     <label></label>
                     <button type="submit" id="can">Submit</button>
                 </div>
-            </div>
+            </div><br><br>
         </form>
     </div>
 @endsection

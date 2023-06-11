@@ -4,8 +4,6 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-use function PHPSTORM_META\map;
-
 class FeedbackRequest extends FormRequest
 {
     /**
@@ -24,21 +22,20 @@ class FeedbackRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
-            'name' => 'nullable|alpha:ascii|max:255',
-            'email' => 'nullable|email:rfc,dns|max:255',
-            'phone' => 'nullable|numeric|min_digits:8|max_digits:10|min:0',
-            'opinion' => 'required|alpha:ascii'
+            'name' => 'required|alpha:ascii|max:255',
+            'email' => 'required|email:rfc,dns|max:255',
+            'phone' => 'required|numeric|integer|min_digits:8|max_digits:10',
+            'opinion' => 'required|alpha:ascii|max:500'
         ];
     }
-
+    //Error message
     public function messages(): array
     {
-    return [
-        'name.required' => 'Please provide us your name only',
-        'email.required' => 'Please provide an email',
-        'phone' => 'Please enter a phone number',
-        'opinion' => 'Please provide your opinion before you submit'
-    ];
+        return [
+            'name.required' => 'Please enter your name',
+            'email.required' => 'Please enter your email',
+            'phone.required' => 'Please enter a phone number',
+            'opinion.required' => 'Please enter your opinion before submit'
+        ];
     }
 }

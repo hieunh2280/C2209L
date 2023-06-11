@@ -1,7 +1,15 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+}
+
 .container{
-    width: 1200px;
-    height: 2170px;
-    margin: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
 }
 
 *{
@@ -16,6 +24,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     background: #fdd7d1;
+    margin: 0 auto;
 }
 
 .logo{
@@ -23,13 +32,15 @@
     height: 120px;
 }
 
-.logo h5{
+.logo a{
     font-family: 'Rubik Puddles', cursive;
     color: #7e1037;
     font-size: 50px;
-    text-align: center;
-    line-height: 60px;
-    padding-left: 10px;
+    padding-left: 5px;
+}
+
+#zoo{
+    padding-left: 50px;
 }
 
 
@@ -156,7 +167,7 @@ h2{
 }
 .book{
     width: 350px;
-    height: 980px;
+    height: 1035px;
     margin: 70px auto;
     text-align: center;
 }
@@ -168,6 +179,7 @@ h2{
     margin: 0px auto;
     margin-right: 22px;
 }
+
 .boo b{
     font-size: 20px;
     margin-right: 55px;
@@ -207,3 +219,20 @@ select{
 .note b{
     font-size: 25px;
 }
+
+.alert{
+    width: 315px;
+    height: 35px;
+    border: 1px solid #f70d1a;
+    border-radius: 10px;
+    margin: 0 auto;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #f70d1a;
+    background: #feeceb;
+    font-family: 'Bruno Ace', cursive;
+}
+

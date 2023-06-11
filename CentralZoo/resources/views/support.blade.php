@@ -7,7 +7,7 @@ Support Us | Central Zoo
 @endsection
 @section('content')
     <div class="title">
-        <img src="{{ asset('img')}}/us.jpg" width="1200" height="550">
+        <img src="{{ asset('img')}}/us.jpg" width="1200" height="550"  style="filter: brightness(75%)">
         <h1>SUPPORT US</h1>
     </div>
 
@@ -30,7 +30,7 @@ Support Us | Central Zoo
                     <br><br>
                     <span>Big Cats need help</span>
                 </div>
-                <p>- Every money can make difference for an animal in need.</p>               
+                <p>- Every money can make a difference for animals in need.</p>               
                 <p>- Your tax-deductible donation will help fight cruelty and make a life-changing difference for animals.</p>
                 <p>- Monthly giving is the easiest and most efficient way to make a difference for animals.</p>
             </div>
@@ -54,7 +54,7 @@ Support Us | Central Zoo
                     <span>Cat Shirt</span>
                 </div>
                 <p>- We offer great products and services and also give back to our lifesaving work for animals.</p>
-                <p>- If you are looking for cute apparel that showcases your love of all animals and supports our work.</p>
+                <p>- If you’re looking for cute apparel that showcases your love of all animals and supports our work.</p>
                 <p>- 20% of the sale price of items from our store directly benefits our work for animals. </p>
             </div> 
         </div>
@@ -62,8 +62,17 @@ Support Us | Central Zoo
 
     <div class="contact" style="background-color: #8eecf5;">
         <h3>CONTACT US</h3>
-        <input type="email" id="email" name="email" placeholder="Enter your Email">
-        <button type="submit" id="sign">Sign Up</button>
+        <form method="post">
+            @csrf
+            <input type="email" id="email" name="email" placeholder="Enter your Email">
+            <button type="submit" id="sign">Sign Up</button>
+            @error('email')
+                <div class="error" style="color: red; text-align: center">
+                    {{ $message }}
+                </div>
+            @enderror
+            <br>
+        </form>
     </div>
     <div class="location">
         <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d245281.87146747462!2d105.71857970146198!3d21.055697193367465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDAxJzUzLjAiTiAxMDXCsDQ4JzI3LjEiRQ!5e0!3m2!1sen!2s!4v1685283369605!5m2!1sen!2s" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

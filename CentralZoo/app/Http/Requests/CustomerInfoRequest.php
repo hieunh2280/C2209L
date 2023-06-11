@@ -22,21 +22,22 @@ class CustomerInfoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
             'firstname' => 'required|alpha:ascii|max:255',
             'lastname' => 'required|alpha:ascii|max:255',
             'email' => 'required|email:rfc,dns|max:255',
-            'phone' => 'required|numeric|min_digits:8|max_digits:10|min:0'
+            'phone' => 'required|numeric|integer|min_digits:8|max_digits:10',
+            'datevisit' => 'required|date'
         ];
     }
-
+    //Error message
     public function messages(): array
     {
-    return [
-        'firstname.required' => 'Please enter your first name',
-        'firstname.required' => 'Please enter your last name',
-        'email.required' => 'Please enter your email',
-        'phone' => 'Please enter your phone number',
-    ];
+        return [
+            'firstname.required' => 'Please enter your first name',
+            'firstname.required' => 'Please enter your last name',
+            'email.required' => 'Please enter your email',
+            'phone.required' => 'Please enter your phone number',
+            'datevisit.required' => 'Please enter your visit date',
+        ];
     }
 }

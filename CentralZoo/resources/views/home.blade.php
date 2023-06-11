@@ -1,23 +1,43 @@
 @extends('layouts.app')
 @section('title')
-Home Page | Central Zoo
+Home | Central Zoo
 @endsection
 @section('css')
 <link href="{{ asset('css/zoo.css') }}" rel="stylesheet">
 @endsection
 @section('content')
+    @if(session('order-success')){
+        <script>
+            alert('{{ session('order-success') }}');
+        </script>
+    }
+    @endif
     <div class="welcome">
         <img src="{{ asset('img')}}/welcome.jpg"/>
         <div class="text">
             <h1>WELCOME TO CENTRAL ZOO</h1>
             <button onclick="location.href=('./animals')" type="submit" id="learn">LEARN MORE</button>
         </div>
-    </div>  
+    </div>
 
+    <div class="about">
+        <h2>About Us</h2>
+        <p>
+            - CENTRAL zoo is one of the biggest zoo in the town. The land area of the zoo is 33
+            acres. CENTRAL zoo was established in the year 1980 with 10 acre land but lately it
+            was modified and land area was also added in the year 2000. 
+        </p>
+        <p>
+            - Proper residing space for all the type of animals has been made and maintains human 
+            security at high rate. Proper supply of food for all the animals is maintained and 
+            checked at regular intervals.
+        </p>
+    </div>
+    
     <div class="plan">
         <div class="box">
             <img src="{{ asset('img')}}/National Geographic Your Shot.jpg" width="450" height="600">
-            <h2>Plan your visit -></h2>
+            <h2>Plan your visit</h2>
         </div>
         <div class="box1">
             <div class="box2">
@@ -46,7 +66,7 @@ Home Page | Central Zoo
                     <div class="box4">
                         <span>Birds Watching</span>
                         <br>
-                        <p id="content">Let's listen to the colorfull and talented birds singing.</p>
+                        <p id="content">Let's listen to the colorful and talented birds singing.</p>
                     </div>
                     <p id="week">Wed and Sat</p>
                     <p id="time">14:30 - 15:00 PM</p>
@@ -78,12 +98,12 @@ Home Page | Central Zoo
     <div class="events">
         <div class="event">
             <h3>Events</h3>
-            <p>It's easy to celebrate big events in 33 arces.</p>
+            <p>It's easy to celebrate big events in 33 acres.</p>
             <div class="ani" >
                 <div class="eve" id="eve">
                     <img src="{{ asset('img')}}/gardern.jpg" width="245" height="320">
                     <br><br><br>
-                    <p>Secret Gardern</p>
+                    <p>Secret Garden</p>
                 </div>
                 <div class="eve" id="eve">
                     <img src="{{ asset('img')}}/Christmas.jpg" width="245" height="320">
@@ -119,7 +139,7 @@ Home Page | Central Zoo
     <div class="events">
         <div class="us">
             <h3>Support Us</h3>
-            <p>You can support animals or our products by being a member:</p>
+            <p>You can support animals or our products by being a member</p>
             <div class="now">
                 <div class="support">
                     <img src="{{ asset('img')}}/elephant1.jpg" width="150" height="150">
@@ -136,7 +156,7 @@ Home Page | Central Zoo
         <div class="feedback">
             <h3>Feedback</h3>
             <p>If you have compliment or criticism during your experience, please text us. Customers' feedback can be a helpful method to improve our zoo.</p>
-            <br><br><br><br><br>
+            <br><br><br>
             <button onclick="location.href=('./feedback')" type="submit" id="feedback">Feedback</button>
         </div>
     </div>

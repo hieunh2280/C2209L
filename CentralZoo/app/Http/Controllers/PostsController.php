@@ -8,57 +8,59 @@ use App\Http\Requests\CustomerInfoRequest;
 use App\Http\Requests\FeedbackRequest;
 use App\Http\Requests\ContactRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use App\Models\Post;
 use Illuminate\Support\Facades\DB;
 
 class PostsController extends Controller
 {
-    //
-    public function ticket(TicketRequest $request){
-        /**
-         *ticket(id, descript, price, tick_type)
-         *(1,'Adult',27,1),
-         *(2,'Child',12,1),
-         *(3,'Student',20,1),
-         *(4,'Community Card',27,1),
-         *(5,'Family 2a2c',66,2),
-         *(6,'Family 2a1c',55,2),
-         *(7,'Family 1a2c',50,2),
-         *(8,'Family 2a3c',80,2);
-         */
+    //Ticket controller
+    public function ticket(TicketRequest $request)
+    {
+        //Check if at least one ticket selected
         $total = $request->adult_num + $request->student_num + $request->child_num + $request->com_card_num + $request->fam_1_num + $request->fam_2_num + $request->fam_3_num + $request->fam_4_num;
-        if ($total == 0){
-            return redirect()->back()->with('failed', 'You must choose at least one ticket')->withInput();
+        if ($total == 0)
+        {
+            return redirect()->back()->with('failed', 'Please choose at least one ticket')->withInput();
         }
-        
+        //Add to cart
         $cart = array($request->adult_num, $request->child_num, $request->student_num, $request->com_card_num, $request->fam_1_num, $request->fam_2_num, $request->fam_3_num, $request->fam_4_num);
         Post::clearCart();
-        if (!Post::pushCart($cart)){
-            return redirect()->back()->with('failed', 'Failed to add your order to your cart')->withInput();
+        if (!Post::pushCart($cart))
+        {
+            session()->flash('failed', 'Failed to add your order to your cart');
+            return redirect()->back()->withInput();
         } 
-        return redirect()->route('order')->withInput();
-        
+        session()->flash('success', 'pass');
+        return redirect()->route('order');     
     }
-
-    public function order(CustomerInfoRequest $request){
-        if($request->membership != null){
+    //Customer infomation controller
+    public function order(CustomerInfoRequest $request)
+    {
+        if($request->membership != null)
+        {
             $member = 1;
         } else {
             $member = 0;   
         }
-
-        if (!Post::order(array($request->firstname, $request->lastname, $request->email, $request->phone, $member))){
-            return redirect()->back()->with('failed', 'Failed to commit your request')->withInput();
+        if (!Post::order(array($request->firstname, $request->lastname, $request->email, $request->phone, $member)))
+        {
+            session()->flash('sucess', 'pass');
+            session()->flash('failed', 'Failed to commit your request');
+            
+            return redirect()->back()->withInput();
         }
-        
-        return redirect()->route('home')->with('order-success','Thanks for using our services, feel free to explore more about our Zoo!');
+        session()->flash('order-success','Thanks for using our services, feel free to explore more about our Zoo!');
+        return redirect()->route('home');
     }
-
-    public function feedback(FeedbackRequest $request){
+    //Feedback controller
+    public function feedback(FeedbackRequest $request)
+    {
         return Post::feedback($request);
     } 
-
-    public function contact(ContactRequest $request){
+    //Contact controller
+    public function contact(ContactRequest $request)
+    {
         return Post::contact($request->email);
     }
 }

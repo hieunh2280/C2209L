@@ -1,7 +1,15 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+}
+
 .container{
-    width: 1200px;
-    height: 2170px;
-    margin: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
 }
 
 *{
@@ -11,11 +19,12 @@
 
 .section{
     width: 1200px;
+    height: 120px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
     background: #fdd7d1;
+    margin: 0 auto;
 }
 
 .logo{
@@ -23,13 +32,15 @@
     height: 120px;
 }
 
-.logo h5{
+.logo a{
     font-family: 'Rubik Puddles', cursive;
     color: #7e1037;
     font-size: 50px;
-    text-align: center;
-    line-height: 60px;
-    padding-left: 10px;
+    padding-left: 5px;
+}
+
+#zoo{
+    padding-left: 50px;
 }
 
 
@@ -82,7 +93,7 @@ button[type='submit']{
 #menu ul li{
     color: aliceblue;
     float: left;
-    width: 120px;
+    width: 195px;
     height: 40px;
     line-height: 40px;
 }
@@ -105,6 +116,7 @@ a:link{
     position: relative;
     width: 1200px;
     height: 550px;
+    margin: auto;
     margin-top: -4px;
 }
 
@@ -113,7 +125,7 @@ a:link{
     top: 30%;
     left: 12%;
     transform: translate(0%, 50%);
-    font-size: 130px;
+    font-size: 110px;
     font-family: 'Bubblegum Sans', cursive;
     color: #f7ece4;
 }
@@ -124,6 +136,9 @@ a:link{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    margin: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: small;
 }
 
 .des{
@@ -156,7 +171,6 @@ h2{
 }
 .book{
     width: 350px;
-    height: 980px;
     margin: 70px auto;
     text-align: center;
 }
@@ -168,6 +182,7 @@ h2{
     margin: 0px auto;
     margin-right: 22px;
 }
+
 .boo b{
     font-size: 20px;
     margin-right: 55px;
@@ -176,37 +191,18 @@ h2{
 #des{
     margin-right: 60px;
 }
+
 #fam{
     margin-right: 202px;
 }
+
 #bo{
    margin-right: 105px;
 }
+
 #stu{
     margin-right: 95px;
 } 
-select{
-    margin-right: 10px;
-    width: 40px;
-    height: 30px;
-}
-#buy{
-    color: #eeeeee;
-    margin: 20px auto;
-    background: #056c89;
-}
-.book h3{
-    font-size: 30px;
-    font-family: 'Caveat', cursive;
-}
-.note{
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 20px;
-}
-.note b{
-    font-size: 25px;
-}
 
 input[type="number"]{
     margin-right: 10px;
@@ -214,3 +210,42 @@ input[type="number"]{
     height: 30px;
 }
 
+#buy{
+    color: #eeeeee;
+    margin: 10px auto;
+    background: #056c89;
+}
+
+.book h3{
+    font-size: 30px;
+    font-family: 'Caveat', cursive;
+}
+
+.note{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 20px;
+}
+
+.note b{
+    font-size: 25px;
+}
+
+#astrick{
+    color: red;
+}
+
+.alert{
+    width: 315px;
+    height: 35px;
+    border: 1px solid #f70d1a;
+    border-radius: 10px;
+    margin: 0 auto;
+    font-size: 15px;
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #f70d1a;
+    background: #feeceb;
+}

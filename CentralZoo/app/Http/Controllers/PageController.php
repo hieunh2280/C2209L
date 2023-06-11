@@ -7,40 +7,48 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    //
-    public function home(){
+    public function home()
+    {
         return view('home');
     }
 
-    public function events(){
+    public function events()
+    {
         return view('events');
     }
 
-    public function feedback(){
+    public function feedback()
+    {
         return view('feedback');
     }
 
-    public function support(){
+    public function support()
+    {
         return view('support');
     }
 
-    public function animals(){
+    public function animals()
+    {
         return view('animals');
     }
 
-    public function ticket(){
+    public function ticket()
+    {
         return view('ticket');
     }
 
-    public function visit(){
+    public function order()
+    {
+        if(session('success'))
+        {
+            return view('order');    
+        }
+        session()->flash('failed', 'Please choose your ticket first');
+        return redirect()->back();
+    }
+
+    public function visit()
+    {
         return view('visit');
-    }
-
-    public function gallery(){
-        return view('gallery');
-    }
-
-    public function about(){
-        return view('about');
-    }
+    } 
 }

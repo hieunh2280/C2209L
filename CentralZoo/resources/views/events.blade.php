@@ -7,7 +7,7 @@ Events | Central Zoo
 @endsection
 @section('content')
     <div class="title">
-        <img src="{{ asset('img')}}/10 Best and Most Beautiful Oxford Colleges.jpg" width="1200" height="640">
+        <img src="{{ asset('img')}}/10 Best and Most Beautiful Oxford Colleges.jpg" width="1200" height="640" style="filter: brightness(75%)">
         <h1>EVENTS</h1>
     </div>
 
@@ -18,7 +18,7 @@ Events | Central Zoo
             <span>Secret Garden</span>
         </div>
         <div class="des">
-            <p>Come join with us in palace, there is something waiting for you. However, you have to get through the maze in the gardern - surounded by beautifull flowers. Try not to get lost and you will have your prize. Step forward, hope the prize will find its worthy owner! </p>
+            <p>Come join with us in palace, there is something waiting for you. However, you have to get through the maze in the garden - surrounded by beautiful flowers. Try not to get lost and you will have your prize. Step forward, hope the prize will find its worthy owner! </p>
             <button type="submit">BUY TICKET</button>
         </div>
     </div>

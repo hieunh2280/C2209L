@@ -11,11 +11,10 @@
 
 .section{
     width: 1200px;
+    height: 120px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     background: #fdd7d1;
 }
 
@@ -24,13 +23,19 @@
     height: 120px;
 }
 
-.logo h5{
+a:link{
+    color: #d0637c;
+}
+
+.logo a{
     font-family: 'Rubik Puddles', cursive;
     color: #7e1037;
     font-size: 50px;
-    text-align: center;
-    line-height: 60px;
-    padding-left: 10px;
+    padding-left: 5px;
+}
+
+#zoo{
+    padding-left: 50px;
 }
 
 .address{
@@ -82,7 +87,7 @@ button[type='submit']{
 #menu ul li{
     color: aliceblue;
     float: left;
-    width: 120px;
+    width: 195px;
     height: 40px;
     line-height: 40px;
 }
@@ -132,6 +137,24 @@ a:link{
     height: 45px;
     margin: auto;
     color: aliceblue;
+}
+
+.about{
+    background:#fefae0;
+    padding: 30px;
+}
+
+.about p{
+    font-family: cursive;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.about h2{
+    font-size: 70px;
+    font-family: 'Euphoria Script', cursive;
+    text-align: center;
 }
 
 .plan{

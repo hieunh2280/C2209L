@@ -19,6 +19,7 @@ use App\Http\Controllers\OrderController;
 Route::prefix("")->group(function(){
     Route::get('/', [PageController::class, 'home'])->name('home');
     Route::get('/support', [PageController::class, 'support'])->name('support');
+    Route::post('/support', [PostsController::class, 'contact']);
     Route::get('/feedback', [PageController::class, 'feedback'])->name('feedback');
     Route::post('/feedback', [PostsController::class, 'feedback']);
     Route::get('/events', [PageController::class, 'events'])->name('events');
@@ -26,7 +27,7 @@ Route::prefix("")->group(function(){
     Route::get('/tickets', [PageController::class, 'ticket'])->name('ticket');
     Route::post('/tickets', [PostsController::class, 'ticket']);
     Route::get('/visit', [PageController::class, 'visit'])->name('visit');
-    Route::get('/gallery', [PageController::class, 'gallery'])->name('gallery');
-    Route::get('/about', [PageController::class, 'about'])->name('about');
+    Route::get('/order', [PageController::class, 'order'])->name('order');
+    Route::post('/order', [PostsController::class, 'order']);
 });
 

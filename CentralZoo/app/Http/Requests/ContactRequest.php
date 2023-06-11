@@ -22,15 +22,14 @@ class ContactRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
-            'email' => 'nullable|email:rfc,dns|max:255'
+            'email' => 'required|email:rfc,dns|max:255'
         ];
     }
-
+    //Error message
     public function messages(): array
     {
         return [
-            'email' => 'Please provide an email'
+            'email.required' => 'Please enter your email'
         ];
     }
 }

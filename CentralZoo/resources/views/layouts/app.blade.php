@@ -13,12 +13,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Kaushan+Script&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Lobster&family=Rubik+Puddles&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Bubblegum+Sans&family=Lobster&family=Rubik+Puddles&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         @include('layouts.header')
         @yield('content')
     </div>
-    
+    <script>
+        window.onbeforeunload = function() {
+          localStorage.setItem('scrollPos', window.scrollY);
+        };
+        window.onload = function() {
+          let scrollPos = localStorage.getItem('scrollPos'); 
+          if (scrollPos) {
+            window.scrollTo(0, scrollPos);
+          }
+        };
+      </script>
 </body>
 </html>

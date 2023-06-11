@@ -1,18 +1,18 @@
 @extends('layouts.app')
 @section('title')
-Plan your visit | Central Zoo
+Plan a Visit | Central Zoo
 @endsection
 @section('css')
 <link rel="stylesheet" href="{{ asset('css') }}/visit.css">
 @endsection
 @section('content')
     <div class="title">
-        <img src="{{ asset('img')}}/visit.jpg" width="1200" height="550">
+        <img src="{{ asset('img')}}/visit.jpg" width="1200" height="550" style="filter: brightness(75%)">
         <h1>PLAN YOUR VISIT</h1>
     </div>
 
     <div class="visit">
-        <h2>Try our activies</h2>
+        <h2>Try our activities</h2>
         <div class="box" style="background-color: #ee8c68;">
             <img src="{{ asset('img')}}/Capybara memes.jpg" id="box" width="400" height="300">
             <br><br><br>
@@ -26,7 +26,7 @@ Plan your visit | Central Zoo
         <div class="box" style="background-color: #ab1e3e;">
             <img src="{{ asset('img')}}/penguins.jpg" width="300" height="400">
             <br><br><br>
-            <span>Watching Peguins</span>
+            <span>Watching Penguins</span>
         </div>
         <div class="box" style="background-color: #96a46b;">
             <img src="{{ asset('img')}}/giraffe.png" width="300" height="400">

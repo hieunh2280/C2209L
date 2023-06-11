@@ -1,5 +1,6 @@
 .container{
     width: 1200px;
+    height: 2530px;
     margin: auto;
 }
 
@@ -10,11 +11,10 @@
 
 .section{
     width: 1200px;
+    height: 120px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
     background: #fdd7d1;
 }
 
@@ -23,15 +23,20 @@
     height: 120px;
 }
 
-.logo h5{
+a:link{
+    color: #d0637c;
+}
+
+.logo a{
     font-family: 'Rubik Puddles', cursive;
     color: #7e1037;
     font-size: 50px;
-    text-align: center;
-    line-height: 60px;
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
+#zoo{
+    padding-left: 50px;
+}
 
 .address{
     display: flex;
@@ -82,7 +87,7 @@ button[type='submit']{
 #menu ul li{
     color: aliceblue;
     float: left;
-    width: 120px;
+    width: 195px;
     height: 40px;
     line-height: 40px;
 }

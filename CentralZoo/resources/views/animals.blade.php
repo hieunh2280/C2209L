@@ -7,7 +7,7 @@ Animals | Central Zoo
 @endsection
 @section('content')
     <div class="title">
-        <img src="{{ asset('img')}}/title.jpg" width="1200" height="500">
+        <img src="{{ asset('img')}}/title.jpg" width="1200" height="500" style="filter: brightness(75%)">
         <h1>MEET THE ANIMALS</h1>
     </div>
 
@@ -57,7 +57,7 @@ Animals | Central Zoo
         </div>
 
         <div class="box">
-            <h2>Other Animals</h2>
+            <h2>Mammals & Other Animals</h2>
             <div class="box1">
                 <div class="picture" style="background-color: #B9CFBA ;">
                     <img src="{{ asset('img')}}/capy.jpg" width="390" height="510">
