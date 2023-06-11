@@ -33,7 +33,7 @@ Plan a Visit | Central Zoo
             <br><br><br>
             <span>Feeding Giraffes</span>
         </div>
-        <h2>Activies for kids</h2>
+        <h2>Activities for kids</h2>
         <div class="box" style="background-color: #72282b;">
             <img src="{{ asset('img')}}/move.png" id="box1" width="300" height="400">
             <br><br>
