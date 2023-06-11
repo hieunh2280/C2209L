@@ -90,8 +90,4 @@ Gallery | Central Zoo
             </div>
        
     </div>
-    <div class="last">
-        <button onclick="location.href=('./visit')" type="submit">Plan your visit</button>
-    </div>
-
 @endsection
